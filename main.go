@@ -77,6 +77,7 @@ func main() {
 		fmt.Println("usage: command macAddr")
 		fmt.Println("")
 		//This should exit now because the command format is not correct
+		os.Exit(1)
 	}
 
 	separator := "/"
