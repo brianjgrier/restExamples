@@ -24,7 +24,6 @@ image, but did require building the program with a static build instead of allow
 the run-time dynamically linked libraries. 
 
 The results for my test builds are:<br>
-$ docker images<br>
 
 | REPOSITORY | TAG | IMAGE ID | CREATED | SIZE |
 | ---------- | -------- | -------------- | -------------------- | ------ |
@@ -39,3 +38,6 @@ add the utility 'curl' to  the image.
 
 Adding my own json parser in shell would result in a considerably smaller container, but would
 not be worth the effort required.
+
+If you want to use the included bash script to build the container images you will need to get your own
+API Key from 'macaddressio.com' and place it in a file named '.macaddress' in your home directory.
