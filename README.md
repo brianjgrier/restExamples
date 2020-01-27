@@ -25,11 +25,15 @@ the run-time dynamically linked libraries.
 
 The results for my test builds are:<br>
 $ docker images<br>
-REPOSITORY                           TAG                 IMAGE ID            CREATED              SIZE<br>
-go_test2                             latest              500318ee8094        About a minute ago   114MB<br>
-go_test1                             latest              b200f0d8975b        2 minutes ago        818MB<br>
-shell_test                           latest              21cacc7136c5        2 minutes ago        197MB<br>
-python_test                          latest              d0c746dca86c        2 minutes ago        183MB<br>
+
+$ docker images<br>
+
+| REPOSITORY | TAG | IMAGE ID | CREATED | SIZE |
+| ---------- | -------- | -------------- | -------------------- | ------ |
+| go_test2 | latest | 500318ee8094 | About a minute ago | 114MB |
+| go_test1 | latest | b200f0d8975b | 2 minutes ago | 818MB |
+| shell_test | latest | 21cacc7136c5 | 2 minutes ago | 197MB | 
+| python_test | latest | d0c746dca86c | 2 minutes ago | 183MB |
 
 Another surprise was the the shell version resulted in a larger image than the python version.
 This is because the shell version leverages python to parse the results, and I also needed to 
