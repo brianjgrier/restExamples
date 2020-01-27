@@ -41,3 +41,11 @@ not be worth the effort required.
 
 If you want to use the included bash script to build the container images you will need to get your own
 API Key from 'macaddressio.com' and place it in a file named '.macaddress' in your home directory.
+
+To test a version use the following linux commands:
+
+docker run -i <image_name> <valid macaddress>
+docker run -i <image_name> <invalid macaddress>
+docker run -i <image_name> <first three octects of macaddr>
+
+
