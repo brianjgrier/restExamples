@@ -26,8 +26,6 @@ the run-time dynamically linked libraries.
 The results for my test builds are:<br>
 $ docker images<br>
 
-$ docker images<br>
-
 | REPOSITORY | TAG | IMAGE ID | CREATED | SIZE |
 | ---------- | -------- | -------------- | -------------------- | ------ |
 | go_test2 | latest | 500318ee8094 | About a minute ago | 114MB |
