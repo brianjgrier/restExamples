@@ -44,8 +44,8 @@ API Key from 'macaddressio.com' and place it in a file named '.macaddress' in yo
 
 To test a version use the following linux commands:
 
-docker run -i <image_name> <valid macaddress> <br>
-docker run -i <image_name> <invalid macaddressa> <br>
-docker run -i <image_name> <first three octects of macaddr> <br>
+docker run -i <image_name> \<valid macaddress> <br>
+docker run -i <image_name> \<invalid macaddressa> <br>
+docker run -i <image_name> \<first three octects of macaddr> <br>
 
 
