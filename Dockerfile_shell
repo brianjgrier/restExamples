@@ -1,0 +1,28 @@
+# Dockerfile References: https://docs.docker.com/engine/reference/builder/
+
+# start from a the latest python image
+
+FROM python:3.6-slim-buster
+LABEL maintainer="Brian Grier <brinjgrier@gmail.com>"
+LABEL version="0.1"
+
+RUN apt-get update \
+  && apt-get install -y curl
+
+RUN useradd -ms /bin/bash appuser
+
+WORKDIR /home/appuser
+
+COPY macaddress .macaddress
+RUN chown appuser:appuser .macaddress
+
+COPY getmacaddrowner.sh getmacaddrowner.sh
+RUN chown appuser:appuser getmacaddrowner.sh
+
+USER appuser
+
+# CMD python ./getmacaddrowner.py
+ENTRYPOINT [ "bash",  "getmacaddrowner.sh" ]
+
+
+

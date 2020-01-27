@@ -1,0 +1,28 @@
+# Dockerfile References: https://docs.docker.com/engine/reference/builder/
+
+# start from a the latest python image
+
+FROM golang:latest
+LABEL maintainer="Brian Grier <brinjgrier@gmail.com>"
+LABEL version="0.1"
+
+RUN useradd -ms /bin/bash appuser
+
+WORKDIR /home/appuser
+
+COPY macaddress .macaddress
+RUN chown appuser:appuser .macaddress
+
+COPY go.mod ./
+COPY main.go ./
+RUN go build -o main .
+RUN chown appuser:appuser main
+
+USER appuser
+ENV PATH="/home/appuser:${PATH}"
+
+# CMD python ./getmacaddrowner.py
+ENTRYPOINT [ "main" ]
+
+
+
