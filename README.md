@@ -37,7 +37,11 @@ This is because the shell version leverages python to parse the results, and I a
 add the utility 'curl' to  the image.
 
 Adding my own json parser in shell would result in a considerably smaller container, but would
-not be worth the effort required.
+not be worth the effort required. Another alternative would be to build an image without a base OS.
+This would utilize the host OS only This would require a complied program with all libraries built
+into the image, but would also require the APIKey to be specified at compile time or be hard coded
+into the program. Without a basic container OS I would not be able to pass in the APIkey when the 
+code is launched.  I will need to see if I can accomplish this at a later time. 
 
 If you want to use the included bash script to build the container images you will need to get your own
 API Key from 'macaddressio.com' and place it in a file named '.macaddress' in your home directory.
