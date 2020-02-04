@@ -14,7 +14,7 @@ As I am relatively new to 'go' I am sure that this could be done much more effic
 
 Part of the request was to create a docker image and supply the build and test instructions.
 
-I decided to buuld a container image for each option. The 'Go' example created an image that
+I decided to build a container image for each option. The 'Go' example created an image that
 was over 800MB, which seemed crazy since Go programs are supposed to be able to be compiled
 and exist outside of a container.
 
